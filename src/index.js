@@ -1,21 +1,26 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 
-// function Prva() {
-//   return <div>
-//           <h2>Ovo je moja prva komponenta</h2>
-//         </div>
-// }
+function Prva() {
+  return (
+        <div>
+         <Licnost/>
+         <Poruka/>
+        </div>
+  );
+}
 
-const Prva = () => {
-  return React.createElement(
-    'div',
-     {},
-     React.createElement('h1', {},'Ovo je moja prva komponenta' )  
-  )
+const Licnost = () => {
+      return   <h2>Ja sam ja Jeremija</h2>
+};
+const Poruka = () => {
+    return      <h2>Voleo bi da pronadjem bolji posao u sledecoj godini!</h2>
 };
 
 
-ReactDom.render(<Prva/>, document.getElementById('root')
-);
+const container = document.getElementById('root');
+
+const root = createRoot(container);
+
+root.render(<Prva/>);
