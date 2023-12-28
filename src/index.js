@@ -11,15 +11,18 @@ function BookList() {
           <Book/>
           <Book/>
           <Book/>
+          <Book/>
+          <Book/>
+          <Book/>
         </section>
   );
 }
 
-          // MINI BUK JE ZAVRSENA, LEKCIJA BR 21 JE GOTOVA!
+          // zavrsena css lekcija!
 
 
 const Book = () => {
-  return <article>
+  return <article className='book'>
           <Image/>
           <Author/>
           <Title/>
