@@ -8,12 +8,25 @@ const firstBook = {
   title: 'I love you to the moon and back',
   author: 'Amelia Hepfort'
 };
+const secondBook = {
+  img: 'https://m.media-amazon.com/images/I/51T7lWxrCoL.jpg'  ,
+  title: 'Our Class is a Family' ,
+  author:  'Shannon Olsen' ,
+};
 
 function BookList() {
   return (
         <section className='booklist'>
-          <Book img={firstBook.img} title={firstBook.title} author={firstBook.author} />
-          <Book title='rendom title' number={22} />
+          <Book 
+            img={firstBook.img} 
+            title={firstBook.title} 
+            author={firstBook.author} 
+            />
+          <Book 
+            img={secondBook.img} 
+            title={secondBook.title} 
+            author={secondBook.author}
+           />
         </section>
   );
 }
@@ -26,7 +39,6 @@ const Book = (props) => {
             <img src={props.img} alt="" />
             <h1>{props.title}</h1>
             <h4>{props.author}</h4>;
-            
         </article>
   )
 };
