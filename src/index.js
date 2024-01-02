@@ -13,30 +13,33 @@ const books= [ {
   title: 'Our Class is a Family' ,
   author:  'Shannon Olsen' ,
 },
-]
+{
+  img: 'https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/713QrA632AL._AC_UY327_FMwebp_QL65_.jpg'  ,
+  title: 'The Vanishing Half: A GMA Book Club Pick ' ,
+  author:  ' Brit Bennett' ,
+},
+];
 
-const names = ['john', 'peter', 'susan'];
-const newNames = names.map((name) => {
-  return <h1>{name}</h1>;
-});
-console.log(newNames);
+
 function BookList() {
   return (
         <section className='booklist'>
-          {newNames}
+          {books.map((book) => {
+            return <Book book={book} ></Book>
+          })};
         </section>
   );
 }
 
-          // props children gotov!
+          // simple gotov, ide proper list!
 
 const Book = (props) => {
+  const {img, title, author} = props.book;
   return ( 
         <article className='book'>
-            <img src={props.img} alt="" />
-            <h1>{props.title}</h1>
-            <h4>{props.author}</h4>;
-            {props.children}
+            <img src={img} alt=""/>
+            <h1>{title}</h1>
+            <h4>{author}</h4>
         </article>
   )
 };
