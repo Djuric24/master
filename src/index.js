@@ -17,7 +17,7 @@ function BookList() {
   );
 }
 
-          // imp exp gotov, ide host!
+          // idu react hooks, 35!
 
 
 
